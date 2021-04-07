@@ -30,10 +30,9 @@ There should also be an output containing errors based on the mode above. For ex
 
 - You can assume that the parameters for the stored procedure will be @Mode,  @TimeFrameStart, and @TimeFrameEnd 
 
-- The DateRange mode should only work for a 5 day period based on the 1WKExpense and 1WkNonReport Columns in the DepartmentMetaData table. You do not need to worry about 5 week totals, 3 day expense,
- totals, etc.
+- The DateRange mode should only work for a 5 day period.
 
-- The expenses monthly total scales linearly. That is if the data contains 2 months the total amount  that can be expensed will be the monthly amount x 2, etc... 
+- You will only need to calculate data on either a 5 day period, monthly period, or all time period. For all time period you can assume that the total amount they can expense will be the 1 month expense max multiplied by the number of months between the oldest and newest date in the ExpenseInfo table. This will also be true for non-reported expense data in the table.
 
 - If the mode is monthly you can assume you will be getting the first and last day of the  month as the @TimeFrameStart and @TimeFrameEnd parameters respectively. You do not need to check if the time frame will be between those months. 
 
