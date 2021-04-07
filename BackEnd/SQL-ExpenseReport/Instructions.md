@@ -22,6 +22,8 @@ There should also be an output containing errors based on the mode above. For ex
  someone passes 7 days into the Date Range mode, a month not contained in the table, etc. 
 
 # Notes 
+- Missing Expenses will be denoted as NULL in the expense column in the ExpenseInfoTable
+
 - For calculating steps 1, 3, 4 above, you are assume that any missing expense will be the average  for that time period for that employee. 
 
 - The data for this example will be truncated between a 3 month period between 01/01/2021 and 03/30/2021. However it should still work if we were to add more data into the table for a different month 
