@@ -7,7 +7,7 @@ In this scenario your CFO has noticed that the expense reports being submitted b
 ### Steps
 
 1. Determine by employee type which people have expensed more than the allocated amount for that type, which in this case will be Developer and Manager
-2. Although there is some leeway with forgetting to submit expenses, determine which employees by employee type have forgotten to report their expenses on a given date 
+2. Although there is some leeway with forgetting to submit expenses, determine which employees by employee type have forgotten to report more than their allowed amount based on the department.  
 3. Determine by employee type who is spending more on average than their group for a given period.
 4. Determine any suspicious employees, that is in any given timeframe their total expenses is greater than 1 standard deviation than the average for that group for that same timeframe.
 
