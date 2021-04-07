@@ -26,10 +26,11 @@
 
 ---
 
-### Bonus Points:
+### Bonus Point Considerations:
 
 - Use both urls
 - Make it look sexy
+- Create some re-usable components
 - Use `Sass` / `styledComponents` / or some other `CSS` tool
 
 #### _This test is purposely open-ended, so feel free to try and impress us!_
