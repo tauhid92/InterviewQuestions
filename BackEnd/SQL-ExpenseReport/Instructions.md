@@ -42,31 +42,31 @@ There should also be an output containing errors based on the mode above. For ex
 
 exec ExpenseInformation @Mode = 'All'
 
-| Mode          | DateRangeStart | DateRange End| Employee | OverExpenseYN | OverNonReportYN | HigherThanAverageYN | SuspeciousYN |
-| ------------- |:-------------: | :-----------:|:--------:|:-------------:|:-------------:  | :-------------:     |:------------:|    
-| All           | 01/01/2021     | 03/30/2021   | Adam     |      1        |      0          |       0             |    1         |
-| All           | 01/01/2021     | 03/30/2021   | Michael  |      0        |      0          |       0             |    0         |
-| All           | 01/01/2021     | 03/30/2021   | Katie    |      1        |      0          |       1             |    0         |
+| Mode          | DateRangeStart | DateRange End  | Employee | OverExpenseYN | OverNonReportYN | HigherThanAverageYN | SuspeciousYN |
+| ------------- |:-------------: | :-----------:  |:--------:|:-------------:|:-------------:  | :-------------:     |:------------:|    
+| All           | 01/01/2021     | 03/30/2021     | Adam     |      1        |      0          |       0             |    1         |
+| All           | 01/01/2021     | 03/30/2021     | Michael  |      0        |      0          |       0             |    0         |
+| All           | 01/01/2021     | 03/30/2021     | Katie    |      1        |      0          |       1             |    0         |
 
 ## Monthly  
 
 exec ExpenseInformation @Mode = 'Month', @TimeFrameStart = '02/01/2021', @TimeFrameEnd = '02/28/2021'
 
-| Mode          | DateRangeStart | DateRange End| Employee | OverExpenseYN | OverNonReportYN | HigherThanAverageYN | SuspeciousYN |
-| ------------- |:-------------: | :-----------:|:--------:|:-------------:|:-------------:  | :-------------:     |:------------:|    
-| Month           | 02/01/2021     | 02/28/2021   | Adam     |      0        |      1          |       0             |    0         |
-| Month           | 02/01/2021     | 02/28/2021   | Michael  |      0        |      0          |       1             |    1         |
-| Month           | 02/01/2021     | 02/28/2021   | Katie    |      0        |      1          |       1             |    1         |
+| Mode          | DateRangeStart | DateRange End    | Employee | OverExpenseYN | OverNonReportYN | HigherThanAverageYN | SuspeciousYN |
+| ------------- |:-------------: | :-----------:    |:--------:|:-------------:|:-------------:  | :-------------:     |:------------:|    
+| Month           | 02/01/2021     | 02/28/2021     | Adam     |      0        |      1          |       0             |    0         |
+| Month           | 02/01/2021     | 02/28/2021     | Michael  |      0        |      0          |       1             |    1         |
+| Month           | 02/01/2021     | 02/28/2021     | Katie    |      0        |      1          |       1             |    1         |
 
 ## DateRange  
 
 exec ExpenseInformation @Mode = 'DateRange', @TimeFrameStart = '03/07/2021', @TimeFrameEnd = '03/12/2021'
 
-| Mode          | DateRangeStart | DateRange End| Employee | OverExpenseYN | OverNonReportYN | HigherThanAverageYN | SuspeciousYN |
-| ------------- |:-------------: | :-----------:|:--------:|:-------------:|:-------------:  | :-------------:     |:------------:|    
-| DateRange     | 03/07/2021     | 03/12/2021   | Adam     |      0        |      1          |       0             |    0         |
-| DateRange     | 03/07/2021     | 02/12/2021   | Michael  |      1        |      0          |       1             |    0         |
-| DateRange     | 03/07/2021     | 02/12/2021   | Katie    |      0        |      1          |       0             |    0         |
+| Mode          | DateRangeStart | DateRange End   | Employee | OverExpenseYN | OverNonReportYN | HigherThanAverageYN | SuspeciousYN |
+| ------------- |:-------------: | :-----------:   |:--------:|:-------------:|:-------------:  | :-------------:     |:------------:|    
+| DateRange     | 03/07/2021     | 03/12/2021      | Adam     |      0        |      1          |       0             |    0         |
+| DateRange     | 03/07/2021     | 02/12/2021      | Michael  |      1        |      0          |       1             |    0         |
+| DateRange     | 03/07/2021     | 02/12/2021      | Katie    |      0        |      1          |       0             |    0         |
 
 ## Error**
 
