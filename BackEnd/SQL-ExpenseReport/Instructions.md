@@ -28,10 +28,9 @@ There should also be an output containing errors based on the mode above. For ex
 
 - The data for this example will be truncated between a 3 month period between 01/01/2021 and 03/30/2021. However it should still work if we were to add more data into the table for a different month 
 
-- You can assume that the parameters for the stored procedure will be @Mode,  @TimeFrameStart, </br> and @TimeFrameEnd 
+- You can assume that the parameters for the stored procedure will be @Mode,  @TimeFrameStart, and @TimeFrameEnd 
 
-- The DateRange mode should only work for a 5 day period, which will be denoted in the 
- EmployeeType Table as 1WkExpense. You do not need to worry about 5 week totals, 3 day expense,
+- The DateRange mode should only work for a 5 day period based on the 1WKExpense and 1WkNonReport Columns in the DepartmentMetaData table. You do not need to worry about 5 week totals, 3 day expense,
  totals, etc.
 
 - The expenses monthly total scales linearly. That is if the data contains 2 months the total amount  that can be expensed will be the monthly amount x 2, etc... 
