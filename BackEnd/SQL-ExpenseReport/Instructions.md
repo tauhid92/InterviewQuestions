@@ -32,9 +32,9 @@ There should also be an output containing errors based on the mode above. For ex
 
 - The DateRange mode should only work for a 5 day period.
 
-- You will only need to calculate data on either a 5 day period, monthly period, or all time period. For all time period you can assume that the total amount they can expense will be the 1 month expense max multiplied by the number of months between the oldest and newest date in the ExpenseInfo table. This will also be true for non-reported expense data in the table.
+- You will only need to calculate data on either a 5 day period, monthly period, or all time period. For all time period you can assume that the total amount they can expense will be the OneMonthExpenseMax, denoted in the DepartmentMetaData table,  multiplied by the number of months between the oldest and newest date in the ExpenseInfo table. This will also be true for non-reported expense data in the table.
 
-- If the mode is monthly you can assume you will be getting the first and last day of the  month as the @TimeFrameStart and @TimeFrameEnd parameters respectively. You do not need to check if the time frame will be between those months. 
+- If the mode is Month you can assume you will be getting the first and last day of the  month as the @TimeFrameStart and @TimeFrameEnd parameters respectively. You do not need to check if the time frame will be between those months. 
 
 # Sample Outputs*
 
