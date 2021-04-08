@@ -13,7 +13,7 @@
 
 ##### There's some basic boilerplate setup already, and the criteria is as follows:
 
-- The 'Show Container Drawer Button' in the div.header, when clicked, should open a drawer in the div.app (please note, .app is .container's parent element).
+- The 'Show App Drawer Button' in the div.header, when clicked, should open a drawer in the div.app (please note, .app is .container's parent element).
 - The 'Show Box Drawer Button' in the div.box, when clicked, should open a drawer in the div.box.
 - You should be able to close the Drawer after it is visible.
 - This is a test mostly about HTML/CSS layout. No need to over-engineer state, consider reusablitly, or other use cases.
