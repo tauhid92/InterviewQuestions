@@ -18,7 +18,6 @@
 - You should be able to close the Drawer after it is visible.
 - This is a test mostly about HTML/CSS layout. No need to over-engineer state, consider reusablitly, or other use cases.
 - Add as many files/folders as you need.
-- You can alter any and all of the css except by adding height/width to .box or .container.
 
 ---
 
