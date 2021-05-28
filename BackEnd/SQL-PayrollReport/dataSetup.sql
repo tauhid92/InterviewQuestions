@@ -1,8 +1,7 @@
-CREATE TABLE Payroll (EmployeeId INT, Paycode VARCHAR(100), Hours DECIMAL(12, 4), Rate DECIMAL(12, 4), FlatAmount DECIMAL(12, 4))
-CREATE TABLE Employees (EmployeeId INT, Employee VARCHAR(100))
+CREATE TABLE payroll (employeeId INT, paycode VARCHAR(100), hours DECIMAL(12, 4), rate DECIMAL(12, 4), flatAmount DECIMAL(12, 4));
+CREATE TABLE employees (employeeId INT, employee VARCHAR(100));
 
-INSERT INTO Payroll
-    (EmployeeId, Paycode, Hours, Rate, FlatAmount)
+INSERT INTO payroll(employeeId, paycode, hours, rate, flatAmount)
 VALUES
     (001, 'Regular', 11.25, 15.21, 0.00),
     (002, 'Regular', 9.00, 15.00, 0.00),
@@ -23,13 +22,13 @@ VALUES
     (003, 'Regular', 8.25, 18.50, 0.00),
     (001, 'Regular', 12.75, 15.21, 0.00),
     (001, 'Regular', 9.50, 15.21, 0.00),
-    (002, 'Regular', 7.00, 15.00, 0.00)
+    (002, 'Regular', 7.00, 15.00, 0.00);
 
-INSERT INTO Employees
-    (EmployeeId, Employee)
+INSERT INTO employees
+    (employeeId, employee)
 VALUES
     (001, 'John Doe'),
     (002, 'Jane Schmidt'),
     (003, 'Matt Smith'),
     (004, 'Chase Jones'),
-    (005, 'David Evans')
+    (005, 'David Evans');
