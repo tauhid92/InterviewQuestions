@@ -7,7 +7,14 @@ Employees (Employee VARCHAR(100), EmployeeId INT)
 
 CREATE PROC PayrollSummary
 AS
-
+BEGIN 
+SELECT e.employee, p.paycode, CAST(SUM((p.hours * p.rate) + p.flatAmount) AS DECIMAL(10,2)) AS total
+FROM payroll AS p LEFT JOIN employees AS e
+ON e.employeeId = p.employeeId
+GROUP BY p.paycode, e.employee
+UNION 
+SELECT 'Total' text, '', CAST(SUM((p.hours * p.rate) + p.flatAmount) AS DECIMAL(10, 2)) FROM payroll AS p
+END
 GO
 
 EXEC PayrollSummary
