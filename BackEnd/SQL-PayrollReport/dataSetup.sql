@@ -1,8 +1,7 @@
-DROP TABLE IF EXISTS employees;
 CREATE TABLE employees (employeeId INT NOT NULL PRIMARY KEY,
 						employee VARCHAR(100));
 
-DROP TABLE IF EXISTS payroll;
+
 CREATE TABLE payroll (entryId INT IDENTITY(1,1) PRIMARY KEY,
 					 employeeId INT FOREIGN KEY REFERENCES employees(employeeId),
 					 entered_at DATETIME NOT NULL
