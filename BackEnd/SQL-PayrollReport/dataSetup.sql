@@ -22,10 +22,10 @@ VALUES
     (005, 'David Evans');
    
 CREATE OR ALTER PROCEDURE checkAndEnter @p_id int,
-										@p_code varchar(100),
-										@p_hours decimal(12, 4),
-										@p_rate decimal(12, 4),
-										@p_flatAmount decimal(12, 4)
+					@p_code varchar(100),
+					@p_hours decimal(12, 4),
+					@p_rate decimal(12, 4),
+					@p_flatAmount decimal(12, 4)					
 	AS
 	IF EXISTS (SELECT*FROM employees e WHERE e.employeeId = @p_id)
 		BEGIN
