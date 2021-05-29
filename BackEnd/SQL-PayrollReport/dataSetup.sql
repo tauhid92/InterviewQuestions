@@ -1,8 +1,16 @@
-DROP TABLE IF EXISTS payroll;
-CREATE TABLE payroll (employeeId INT, paycode VARCHAR(100), hours DECIMAL(12, 4), rate DECIMAL(12, 4), flatAmount DECIMAL(12, 4));
 DROP TABLE IF EXISTS employees;
-CREATE TABLE employees (employeeId INT, employee VARCHAR(100));
+CREATE TABLE employees (employeeId INT NOT NULL PRIMARY KEY,
+						employee VARCHAR(100));
 
+DROP TABLE IF EXISTS payroll;
+CREATE TABLE payroll (entryId INT IDENTITY(1,1) PRIMARY KEY,
+					 employeeId INT FOREIGN KEY REFERENCES employees(employeeId),
+					 entered_at DATETIME NOT NULL
+                		DEFAULT CURRENT_TIMESTAMP,
+					 paycode VARCHAR(100),
+					 hours DECIMAL(12, 4),
+					 rate DECIMAL(12, 4),
+					 flatAmount DECIMAL(12, 4));
 
 INSERT INTO employees
     (employeeId, employee)
@@ -13,7 +21,11 @@ VALUES
     (004, 'Chase Jones'),
     (005, 'David Evans');
    
-CREATE OR ALTER PROCEDURE checkAndEnter @p_id int, @p_code varchar(100), @p_hours decimal(12, 4), @p_rate decimal(12, 4), @p_flatAmount decimal(12, 4)
+CREATE OR ALTER PROCEDURE checkAndEnter @p_id int,
+										@p_code varchar(100),
+										@p_hours decimal(12, 4),
+										@p_rate decimal(12, 4),
+										@p_flatAmount decimal(12, 4)
 	AS
 	IF EXISTS (SELECT*FROM employees e WHERE e.employeeId = @p_id)
 		BEGIN
