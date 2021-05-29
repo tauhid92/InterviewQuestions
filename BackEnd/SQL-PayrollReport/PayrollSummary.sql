@@ -5,7 +5,7 @@ Payroll (EmployeeId INT, Paycode VARCHAR(100), Hours DECIMAL(12, 4), Rate DECIMA
 Employees (Employee VARCHAR(100), EmployeeId INT)
 */
 
-CREATE PROC PayrollSummary
+CREATE OR ALTER PROCEDURE PayrollSummary
 AS
 BEGIN 
 SELECT e.employee, p.paycode, CAST(SUM((p.hours * p.rate) + p.flatAmount) AS DECIMAL(10,2)) AS total
